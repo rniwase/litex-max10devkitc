@@ -82,7 +82,6 @@ def main():
 
     if args.load:
         prog = soc.platform.create_programmer()
-        prog.cable_name = "USB-BlasterII"
         prog.load_bitstream(os.path.join(builder.gateware_dir, soc.build_name + ".sof"))
 
 if __name__ == "__main__":

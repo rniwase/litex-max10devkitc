@@ -57,7 +57,7 @@ class Platform(AlteraPlatform):
         self.add_platform_command("set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE \"SINGLE IMAGE WITH ERAM\"")
 
     def create_programmer(self):
-        return USBBlaster()
+        return USBBlaster(cable_name="USB-BlasterII")
 
     def do_finalize(self, fragment):
         AlteraPlatform.do_finalize(self, fragment)
